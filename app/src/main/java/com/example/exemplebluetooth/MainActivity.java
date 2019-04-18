@@ -207,12 +207,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
-        btnStartConnection.setOnClickListener(new View.OnClickListener() {
+      /*  btnStartConnection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startConnection();
             }
-        });
+        });*/
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -226,9 +226,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //create method for starting connection
 //***remember the conncction will fail and app will crash if you haven't paired first
-    public void startConnection(){
+   /* public void startConnection(){
         startBTConnection(mBTDevice,MY_UUID_INSECURE);
-    }
+    }*/
 
     /**
      * starting chat service method
@@ -273,6 +273,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         IntentFilter intentFilter = new IntentFilter(mBluetoothAdapter.ACTION_SCAN_MODE_CHANGED);
         registerReceiver(mBroadcastReceiver2,intentFilter);
+        startBTConnection(mBTDevice, MY_UUID_INSECURE);
 
     }
 

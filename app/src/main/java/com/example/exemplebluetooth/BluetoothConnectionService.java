@@ -161,7 +161,7 @@ public class BluetoothConnectionService {
     public void write(byte[] out){
         ConnectedThread theConnectedThread;
 
-        Log.d(TAG, "cancel: Canceling ConnectThread");
+        Log.d(TAG, "write: writing message");
         connectedThread.write(out);
     }
     /**
