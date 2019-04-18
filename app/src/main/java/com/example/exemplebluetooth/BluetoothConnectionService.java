@@ -185,7 +185,7 @@ public class BluetoothConnectionService {
         Log.d(TAG, "startClient: started");
 
         bTProgressDialog = bTProgressDialog.show(context,
-                "Connecting BLuetooth",
+                "Connecting Bluetooth",
                 "Please Wait...",
                 true);
         connectThread = new ConnectThread(device, uuid);
@@ -234,7 +234,7 @@ public class BluetoothConnectionService {
                 try {
                     bytesReturned = inputStreamSeed.read(bufferSeed);
                     String incomingSeed = new String(bufferSeed,0,bytesReturned);
-                    Log.d(TAG, "InpoutStream: " + incomingSeed);
+                    Log.d(TAG, "InputStream: " + incomingSeed);
                 } catch (IOException e) {
                     Log.d(TAG, "failed writing to input Stream");
                     e.printStackTrace();
